@@ -28,7 +28,7 @@ $ python setup.py install
 $ python setup.py develop
 
 # enable this plugin globally (for all runs in this pyATS instance) at this virtual environment
-$ cp easypy_config.yaml
+$ cp easypy_config.yaml $VIRTUAL_ENV
 
 # or, enable the plugin locally (for this run only) by passing in a config YAML via a command-line argument called -configuration.
 $ easypy easypy_job.py -configuration easypy_config.yaml
