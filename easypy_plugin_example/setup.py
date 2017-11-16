@@ -13,19 +13,6 @@ to write this file, please refer to:
     setuptools: https://setuptools.readthedocs.io/en/latest/setuptools.html
     distutils: https://docs.python.org/3/distutils/setupscript.html
 
-The only part to be aware of when writing a setup.py file for Easypy plugins,
-is to ensure you use indicate the correct entrypoint argument:
-
-    setup(
-        # ...
-        entry_points = {'easypy.plugins': ['<plugin_name> = <module_name>']},
-        # ...
-    )
-
-where <plugin_name> should be replaced with with your plugin name (allowed
-character set A-Za-z0-9_), and <module_name> replaced with the module where your
-plugin is implemented within this package. Note that this also supports a list
-of plugins per package.
 '''
 
 
@@ -92,9 +79,8 @@ setup(
     # additional package data files that goes into the package itself
     package_data = {},
 
-    # console entry point (pay attention here)
-    # as an example, we are implementing a platform called "example"
-    entry_points = {'easypy.plugins': ['example = easypy_plugin_example']},
+    # console entry point
+    entry_points = {},
 
     # package dependencies
     install_requires =  ['setuptools', 'ats.easypy'],
