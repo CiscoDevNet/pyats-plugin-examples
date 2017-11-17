@@ -1,0 +1,23 @@
+# Example
+# -------
+#
+#   example easypy configuration file for plugins
+
+plugins:                   # top level key for plugins
+
+    HelloWorldPlugin:   # this is the plugin name we defined
+                        # enabled, module and order keys are
+                        # mandatory. Any additional key/values are
+                        # used as arguments to the plugin class
+                        # constructor.
+
+      enabled: True           # flag marking it as "enabled"
+                              # set to False to disable a plugin
+
+      module: easypy_plugin_example      # module path where this
+                                         # plugin can be imported
+
+      order: 1.0                # defines the order of execution of plugins
+                                # it's just a number that allows users to
+                                # specify plugin order.
+                                # - smaller numbers runs first
